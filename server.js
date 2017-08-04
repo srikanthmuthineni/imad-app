@@ -14,7 +14,26 @@ var articles={
             <p>this is my first content of my first articlethis is my first content of my first articlethis is my first content of my first article</p>
             
     `
+},
+'article-two':{
+    title:'Article Two & Srikanth',
+    date:'aug 4,2017',
+    content:`
+     <p>this is my first content of my first article,this is my first content of my first articlethis is my first content of my first article</p>
+            
+            
+    `
+},
+'article-three':{
+    title:'Article Three & Srikanth',
+    date:'aug 4,2017',
+    content:`
+     <p>this is my first content of my first article,this is my first content of my first articlethis is my first content of my first article</p>
+            
+            
+    `
 }
+  
   
     
 };
