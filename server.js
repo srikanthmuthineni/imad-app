@@ -20,7 +20,7 @@ var content=data.content;
 var htmlTemplate=`
 <html>
     <head>
-        <title>${titile}</title>
+        <title>${title}</title>
         <meta name="viewport" content="width=device-width,intial-scale=1"/>
        <link rel="stylesheet" href="/ui/style.css"/>
         
