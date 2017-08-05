@@ -32,16 +32,35 @@ button.onclick=function()
     request.send(null);
 };*/
 
-var nameInput = document.getElementById('name');
-var value = nameInput.value;
+
 var submit = document.getElementById('sumbit-btn');
-submit.onclick = function(){
-    var name = ['name1','name2','name3'];
-    var list = "";
+submit.onclick = function()
+{
+     var request =new XMLHttpRequest();
+      request.onreadystatechange=function()
+      {
+        if(request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200)
+            {
+                var namesr=request.responseText;
+                names = JSON.parse(names);
+                var list = "";
     for(var i=0;i<name.length;i++)
     {
         list += '<li>'+name[i]+'</li>';
     }
     var ul= document.getElementById('namelist');
     ul.innerHTML = list;
+                 
+            }
+        }
+        
+    };
+    var nameInput = document.getElementById('name');
+    var value = nameInput.value;
+     request.open('GET','http://srikanthmuthineni@sh.imad.hasura-app.io/submit-name?name=' + value ,true);
+    request.send(null);
+   
+    
 };
