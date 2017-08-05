@@ -60,7 +60,7 @@ submit.onclick = function()
     var nameInput = document.getElementById('name');
     var value = nameInput.value;
      request.open('GET','http://srikanthmuthineni@sh.imad.hasura-app.io/submit-name?name=' + value ,true);
-    request.send(null);
+    request.send('');
    
     
 };
