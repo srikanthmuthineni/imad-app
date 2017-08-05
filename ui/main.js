@@ -28,6 +28,6 @@ button.onclick=function()
         }
         
     };
-    request.open('GET','http://srikanthmuthineni@sh.imad.hasura-app.io/counter',true);
+    request.open('GET','http://srikanthmuthineni@sh.imad.hasura-app.io/counter','true');
     request.send(null);
 };
