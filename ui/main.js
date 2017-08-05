@@ -11,7 +11,7 @@ console.log('Loaded!');
     //var interval = setInterval(moveRight,50);
 //};
 
-var button=document.getElementById('counter');
+/*var button=document.getElementById('counter');
 var counter = 0;
 button.onclick=function()
 {
@@ -30,7 +30,7 @@ button.onclick=function()
     };
     request.open('GET','http://srikanthmuthineni@sh.imad.hasura-app.io/counter',true);
     request.send(null);
-};
+};*/
 
 var nameInput = document.getElementById('name');
 var value = nameInput.value;
