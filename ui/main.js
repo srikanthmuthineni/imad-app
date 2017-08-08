@@ -1,17 +1,8 @@
 console.log('Loaded!');
-var element = document.getElementById('main-text');
-element.innerHTML = "New Value";
-var img = document.getElementById('madi');
-var marginleft = 0;
-function moveRight(){
-    marginleft = marginleft + 10;
-    img.style.marginLeft = marginleft + 'px';
-    
-}
-
-
-img.onclick = function()
-{
-    var interval = setInterval(moveRight,100);
+var counter = 0;
+var button = document.setElementById('counter');
+button.onclick = function(){
+    counter = counter + 1;
+    var span = document.setElementById('count');
+    span.innerHTML = counter.toString();
 };
-
