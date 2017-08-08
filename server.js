@@ -9,9 +9,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 var names = [];
-app.get('/submit-name/:name1', function (req, res) {
-    var name = request.params.name1;
-    names.pus(name);
+app.get('/submit-name/:name', function (req, res) {
+    var name = request.params.name;
+    names.push(name);
     res.send(JSON.stringify(names));
 
 });
