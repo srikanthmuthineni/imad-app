@@ -8,9 +8,11 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-app.get('/submit-name', function (req, res) {
-    res.send('srikanth');
+var names = [];
+app.get('/submit-name/:name1', function (req, res) {
+    var name = request.params.name1;
+    names.pus(name);
+    res.send(JSON.stringify(names));
 
 });
 var counter = 0;
