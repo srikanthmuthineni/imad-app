@@ -43,7 +43,7 @@ submit.onclick = function(){
     };
     var nameInput = document.getElementById('name');
 var value = nameInput.value;
-    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/sumbit-name?name='+value,true);
+    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/sumbit-name?name=' + value,true);
     request.send(null)
 };
 
