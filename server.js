@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/submit-name', function (req, res) {
-    res.send('srikanth')
+    res.send('srikanth');
 
 });
 var counter = 0;
