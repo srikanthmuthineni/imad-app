@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var pool = require('pg').pool;
+
 var config={
     user: 'srikanthmuthinei78',
     database:'srikanthmuthineni78',
