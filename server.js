@@ -66,7 +66,7 @@ function crateTemplate(data)
     
 }
 app.get('/article/:articlename',function(req,res){
-    pool.query("select * from articles where title = ' " +req.params.articlename+ " ' ",function(err,result){
+    pool.query("SELECT  * FROM  articles where title = ' " +req.params.articlename+ " ' ",function(err,result){
        
        if(err){
            res.status(500).send(err.toString());
