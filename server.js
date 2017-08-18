@@ -38,6 +38,14 @@ app.get('/counter', function (req, res) {
     counter = counter + 1;
   res.send(counter.toString());
 });
+function crateTemplate(data)
+{
+    var title=data.title;
+    var header=data.header;
+    var date=data.date;
+    var datatemplate= ;
+    
+}
 app.get('/article/:articlename',function(req,res){
     pool.query("select * from article where title=",function(err,result){
        
