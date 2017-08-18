@@ -58,7 +58,7 @@ function crateTemplate(data)
     <h3> ${header}</h3>
     <div> ${date}</div>
     <div>
-    <p>${content}</p>
+    ${content}
     </div>
        </body>
 </html>
