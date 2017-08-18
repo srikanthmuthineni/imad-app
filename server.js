@@ -43,7 +43,21 @@ function crateTemplate(data)
     var title=data.title;
     var header=data.header;
     var date=data.date;
-    var datatemplate= ;
+    var datatemplate=`
+    <!doctype html>
+<html>
+    <head>
+       <title>${title}</title>
+    </head>
+    <body>
+    <div>
+    <a href="/">Home</a>
+    </div>
+    <hr/>
+    <h3> ${header}</h3>
+       </body>
+</html>
+`;
     
 }
 app.get('/article/:articlename',function(req,res){
