@@ -4,7 +4,14 @@ var path = require('path');
 var app = express();
 var pool = require('pg').pool;
 app.use(morgan('combined'));
-
+var config = {
+    user:'srikanthmuthineni78',
+    database:'srikanthmuthineni78',
+    host:'db.imd.hasura-app.io',
+    port:'432',
+    password:'process.env.DB-PASSWORD'
+    
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
