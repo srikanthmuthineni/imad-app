@@ -8,7 +8,7 @@ var config = {
     user:'srikanthmuthineni78',
     database:'srikanthmuthineni78',
     host:'db.imd.hasura-app.io',
-    port:'432',
+    port:'80',
     password:'process.env.DB-PASSWORD'
     
 };
