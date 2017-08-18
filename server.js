@@ -43,6 +43,7 @@ function crateTemplate(data)
     var title=data.title;
     var header=data.header;
     var date=data.date;
+    var content=data.content;
     var datatemplate=`
     <!doctype html>
 <html>
@@ -55,6 +56,10 @@ function crateTemplate(data)
     </div>
     <hr/>
     <h3> ${header}</h3>
+    <div> ${date}</div>
+    <div>
+    <p>${content}</p>
+    </div>
        </body>
 </html>
 `;
