@@ -38,6 +38,21 @@ app.get('/counter', function (req, res) {
     counter = counter + 1;
   res.send(counter.toString());
 });
+app.get('/article/:articlename',function(req,res){
+    pool.query("select * from article where title=",function(err,result){
+       
+       if(err){
+           res.status(500).send(err.toString());
+           
+       }
+       else
+       {
+           if
+       }
+        
+        
+    });
+});
 
 
 app.get('/ui/main.js', function (req, res) {
