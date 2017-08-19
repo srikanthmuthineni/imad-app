@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 
 function hash(input,salt)
 {
-    var hashed = crypto.pdkdf2sync(input,salt,1000,512,'sha512');
+    var hashed = crypto.pdkdf2Sync(input,salt,1000,512,'sha512');
     return hashed.toString('hex');
     
 }
