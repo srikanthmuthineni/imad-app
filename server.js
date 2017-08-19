@@ -71,7 +71,7 @@ app.get('/counter', function (req, res) {
     counter = counter + 1;
   res.send(counter.toString());
 });
-function crateTemplate(data)
+/*function crateTemplate(data)
 {
     var title=data.title;
     var header=data.header;
@@ -120,7 +120,7 @@ app.get('/article/:articlename',function(req,res){
         
         
     });
-});
+});*/
 
 
 app.get('/ui/main.js', function (req, res) {
