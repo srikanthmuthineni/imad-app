@@ -5,8 +5,13 @@ var app = express();
 var Pool = require('pg').Pool;
 var crypto =require('crypto');
 var bodyparser = require('body-parser');
+var session = require('express-session');
 app.use(morgan('combined'));
 app.use(bodyparser.json());
+app.use(session({
+    secret:'someRandomSecretValue',
+    cookie:{maxAge:1000*60*60*24*30}
+}));
 var config = {
     user:'srikanthmuthineni78',
     database:'srikanthmuthineni78',
@@ -69,6 +74,7 @@ app.post('/login',function(req,res){
               var hashpassword = hash(password,salt);
               if(hashpassword === dbstring)
               {
+                  req.session.auth={userid:result.rows[0].id};
                   res.send("credentials correct");
               }
               else
@@ -79,6 +85,17 @@ app.post('/login',function(req,res){
          
       }
   });
+    
+});
+app.get('/check-login',function(req,res){
+   if(req.session && req.session.auth && req.session.auth.userid) 
+   {
+       res.send("your are logged in"+ req.session.auth.userid.toString());
+   }
+   else
+   {
+       res.send("your are not logged in");
+   }
     
 });
 var pool = new Pool(config);
