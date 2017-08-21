@@ -29,20 +29,35 @@ button.onclick = function(){
     request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/count',true);
     request.send(null);
 };
-var nameinput = document.getElementById('name');
-var value =nameinput.value;
-var submit = document.getElementById('submit-btn');
-submit.onclick = function(){
-    var name = ['name1','name2','name3'];
-    var list = "" ;
+var button = document.getElementById("submit-btn");
+button.onclick = function(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+      if(request.readyState === XMLHttpRequest.DONE)
+      {
+          if(request.status === 200)
+          {
+              var names = request.responseText;
+              names =JSON.parse(names);
+               var list = "" ;
     for( var i=0;i<name.length;i++)
     {
         list += '<li>'+ name[i] + '</li>' ;
     }
     var ul = document.getElementById('nameid');
     ul.innerHTML = list;
-    
+             
+          }
+      }
+    };
+    var nameinput = document.getElementById('name');
+var value =nameinput.value;
+
+    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/count',true);
+    request.send(null);
 };
+
+
 
 
 /*var submit = document.getElementById('submit-btn');
