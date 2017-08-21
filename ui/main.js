@@ -26,7 +26,7 @@ button.onclick = function(){
           }
       }
     };
-    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/counter',true);
+    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/count',true);
     request.send(null);
 };
 
