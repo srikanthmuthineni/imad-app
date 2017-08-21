@@ -8,7 +8,7 @@ function moveright()
 
 var img = document.getElementById('madi');
 img.onclick = function(){
-var interval = setInerval(moveright,100);
+var interval = setInterval(moveright,100);
 };
 /*var counter = 0;
 var button = document.getElementById("counter");
