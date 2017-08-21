@@ -3,7 +3,7 @@ var moveleft = 0;
 function moveright()
 {
     moveleft = moveleft + 10;
-    image.style.marginleft = moveleft +'px';
+    img.style.marginleft = moveleft +'px';
 }
 
 var img = document.getElementById('madi');
