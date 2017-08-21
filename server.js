@@ -17,7 +17,7 @@ var articleone = {
     title:'atricle one & srikanth',
     heading:'articleone',
     date:'agu 4,2016',
-    content:'this is article-one content'
+    content:'<p>this is article-one content</p>'
     
 };
 
@@ -28,12 +28,31 @@ function createtemplate(data)
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
-    var htmltemplate={
+    var htmltemplate=`
+        
+<html>
+    <title>${title}</title>
+    <body>
+        <div>
+        <a href="/">Home</a>
+        </div>
+        <hr/>
+        <h3>${heading}</h3>
+        <div>
+            
+    ${date}
+        </div>
+        <div>${content}</div>
+    </body>
     
-}
+</html>
+`;
+return htmltemplate;
+    }  
+
 app.get('/articleone',function(req,res){
    
-    res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+    res.send(createtemplate(articleone));
 });
 
 
