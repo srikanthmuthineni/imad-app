@@ -9,7 +9,7 @@ var config = {
     database:'srikanthmuthineni78',
     host:'db.imd.hasura-app.io',
     port:'5432',
-    password:process.env.DB-PASSWORD
+    password:process.env.DB_PASSWORD
 };
 var pool = new pool(config);
 app.get('/test-db',function(req,res){
