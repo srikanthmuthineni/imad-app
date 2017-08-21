@@ -1,8 +1,14 @@
 console.log('Loaded!');
-console.log(alert('hai'));
+var moveleft = 0;
+function moveright()
+{
+    moveleft = moveleft + 10;
+    image.style.marginleft = moveleft +'px';
+}
+
 var img = document.getElementById('madi');
 img.onclick = function(){
-    img.style.marginLeft = '100px';
+var interval = setInerval(moveright,100);
 };
 /*var counter = 0;
 var button = document.getElementById("counter");
