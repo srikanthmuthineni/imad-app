@@ -13,8 +13,11 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-
+var count = 0;
+app.get('/count',function(req,res){
+   count = count + 1; 
+   res.send(count.toString());
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
