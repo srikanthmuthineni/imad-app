@@ -18,6 +18,10 @@ app.get('/articleone',function(req,res){
    
    res.send('article one required and will be served here') ;
 });
+app.get('/articletwo',function(req,res){
+   
+   res.send('article two required and will be served here') ;
+});
 
 
 app.get('/ui/main.js', function (req, res) {
