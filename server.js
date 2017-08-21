@@ -23,7 +23,7 @@ app.get('/articletwo',function(req,res){
    res.send('article two required and will be served here') ;
 });
 
-app.get('/articletwo',function(req,res){
+app.get('/articlethree',function(req,res){
    
    res.send('article two required and will be served here') ;
 });
