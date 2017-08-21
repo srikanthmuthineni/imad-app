@@ -14,7 +14,10 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+app.get('/articleonw',function(req,res){
+   
+   res.send('article one required and will be served here') ;
+});
 
 
 app.get('/ui/main.js', function (req, res) {
