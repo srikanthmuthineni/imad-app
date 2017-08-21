@@ -10,14 +10,8 @@ var img = document.getElementById('madi');
 img.onclick = function(){
 var interval = setInterval(moveright,100);
 };
-var counter =0;
-var button = document.getElementById("counter");
-button.onclick = function(){
-    counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
-};
-/*var counter = 0;
+
+var counter = 0;
 var button = document.getElementById("counter");
 button.onclick = function(){
     var request = new XMLHttpRequest();
@@ -34,7 +28,7 @@ button.onclick = function(){
     };
     request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/counter',true);
     request.send(null);
-};*/
+};
 
 
 /*var submit = document.getElementById('submit-btn');
