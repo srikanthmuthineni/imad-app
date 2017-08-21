@@ -13,13 +13,26 @@ app.use(bodyparser.json());
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleone = {
+var articles ={
+ 'articleone' : {
     title:'atricle one & srikanth',
     heading:'articleone',
     date:'agu 4,2016',
     content:'<p>this is article-one content</p>'
     
+},
+'articletwo' : {
+    title:'atricle two & srikanth',
+    heading:'articletwo',
+    date:'agu 4,2016',
+    content:'<p>this is article-one content</p>'
+    
+}
+
 };
+
+
+
 
 function createtemplate(data)
 {
