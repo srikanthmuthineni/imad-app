@@ -19,7 +19,7 @@ button.onclick = function(){
 };*/
 
 
-var submit = document.getElementById('submit-btn');
+/*var submit = document.getElementById('submit-btn');
 submit.onclick = function(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
@@ -50,5 +50,5 @@ console.log(password);
     request.open('POST','http://srikanthmuthineni78.imad.hasura-app.io/login',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username: username,password: password}));
-};
+};*/
 
