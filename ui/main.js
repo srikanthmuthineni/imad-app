@@ -1,5 +1,5 @@
 console.log('Loaded!');
-console.log('hai');
+console.log(alert('hai'));
 /*var counter = 0;
 var button = document.getElementById("counter");
 button.onclick = function(){
