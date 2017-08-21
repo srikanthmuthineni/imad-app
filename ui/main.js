@@ -40,9 +40,9 @@ button.onclick = function(){
               var names = request.responseText;
               names =JSON.parse(names);
                var list = "" ;
-    for( var i=0;i<name.length;i++)
+    for( var i=0;i<names.length;i++)
     {
-        list += '<li>'+ name[i] + '</li>' ;
+        list += '<li>'+ names[i] + '</li>' ;
     }
     var ul = document.getElementById('nameid');
     ul.innerHTML = list;
@@ -53,7 +53,7 @@ button.onclick = function(){
     var nameinput = document.getElementById('name');
 var value =nameinput.value;
 
-    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/count',true);
+    request.open('GET','http://srikanthmuthineni78.imad.hasura-app.io/submitname?name='+ value,true);
     request.send(null);
 };
 
