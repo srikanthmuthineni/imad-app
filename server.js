@@ -12,6 +12,17 @@ var config = {
     password:process.env.DB_PASSWORD
 };
 var pool = new pool(config);
+
+//var crypto =require('crypto');
+//var bodyparser = require('body-parser');
+//var session = require('express-session');
+app.use(morgan('combined'));
+//app.use(bodyparser.json());
+
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 app.get('/test-db',function(req,res){
    pool.query("SELECT * FROM test",function(err,result){
        if(err){
@@ -23,17 +34,6 @@ app.get('/test-db',function(req,res){
        }
    }) ;
 });
-//var crypto =require('crypto');
-//var bodyparser = require('body-parser');
-//var session = require('express-session');
-app.use(morgan('combined'));
-//app.use(bodyparser.json());
-
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-
 var names=[];
 app.get('/submitname',function(req,res){
    var name = req.query.name;
