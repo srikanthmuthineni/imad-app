@@ -1,7 +1,7 @@
 console.log('Loaded!');
 console.log(alert('hai'));
 var img = document.getElementById('madi');
-img.onClick = function(){
+img.onclick = function(){
     img.style.marginLeft = '100px';
 };
 /*var counter = 0;
