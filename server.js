@@ -23,6 +23,11 @@ app.get('/articletwo',function(req,res){
    res.send('article two required and will be served here') ;
 });
 
+app.get('/articletwo',function(req,res){
+   
+   res.send('article two required and will be served here') ;
+});
+
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
