@@ -1,13 +1,13 @@
 var express = require('express');
 var morgan = require('morgan');
-var path = require('path');
+//var path = require('path');
 var app = express();
-var Pool = require('pg').Pool;
-var crypto =require('crypto');
-var bodyparser = require('body-parser');
-var session = require('express-session');
+//var Pool = require('pg').Pool;
+//var crypto =require('crypto');
+//var bodyparser = require('body-parser');
+//var session = require('express-session');
 app.use(morgan('combined'));
-app.use(bodyparser.json());
+//app.use(bodyparser.json());
 
 
 app.get('/', function (req, res) {
