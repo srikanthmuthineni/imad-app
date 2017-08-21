@@ -13,6 +13,12 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var names=[];
+app.get('/submitname/:name',function(req,res){
+   var name = req.params.name;
+   names.push(name);
+   res.send(JSON.stringify(names));
+});
 var count = 0;
 app.get('/count',function(req,res){
    count = count + 1; 
