@@ -13,20 +13,29 @@ app.use(bodyparser.json());
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var articleone = {
+    title:'atricle one & srikanth',
+    heading:'articleone',
+    date:'agu 4,2016',
+    content:'this is article-one content'
+    
+};
 
+function createtemplate(data)
+{
+    
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    var htmltemplate={
+    
+}
 app.get('/articleone',function(req,res){
    
     res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
 });
-app.get('/articletwo',function(req,res){
-   
-   res.send('article two required and will be served here') ;
-});
 
-app.get('/articlethree',function(req,res){
-   
-   res.send('article three required and will be served here') ;
-});
 
 
 app.get('/ui/main.js', function (req, res) {
